@@ -1,12 +1,22 @@
+import logo from '@assets/icons/sirius.png'
+import CategoryList from '@components/templates/categoryList'
+import NoticeList from '@components/templates/noticeList'
+import BottomNavigation from '@components/organisms/bottomNavigation'
+import { FaBars, FaRegUserCircle } from 'react-icons/fa'
+
 const Home = () => {
   return (
-    <div className="w-full h-screen">
-      <div className="w-full xl:h-2/6 md:h-1/5">
-        <img className="w-full h-full object-cover" src="https://picsum.photos/2000/1000" alt="" />
+    <div className="w-full">
+      <div className="fixed top-0 left-0 bg-white shadow-md w-full h-14 flex flex-row justify-between items-center px-4 rounded-b-xl">
+        <FaBars />
+        <img className="w-10 h-10 object-contain" src={logo} alt="" />
+        <FaRegUserCircle />
       </div>
-      <div className="w-full h-full p-4">
-        <div className="w-full flex flex-col space-y-2">Desbravadores</div>
+      <div className="w-full h-screen mt-24 px-4 py-2 rounded-t-3xl bg-white shadow-md flex flex-col justify-start items-start">
+        <CategoryList />
+        <NoticeList />
       </div>
+      <BottomNavigation />
     </div>
   )
 }

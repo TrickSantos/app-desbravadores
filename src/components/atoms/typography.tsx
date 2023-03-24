@@ -11,7 +11,11 @@ const Title = (props: TitleProps) => {
   const { children, level = 1, className, onClick } = props
   const Tag = `h${level}` as keyof JSX.IntrinsicElements
 
-  return <Tag onClick={onClick} className={`font-sans ${className}`}>{children}</Tag>
+  return (
+    <Tag onClick={onClick} className={`font-sans ${className}`}>
+      {children}
+    </Tag>
+  )
 }
 
 export type TextProps = {
@@ -37,7 +41,7 @@ export type ParagraphProps = {
 
 const Paragraph = (props: ParagraphProps) => {
   const { children, className } = props
-  return <p className={`font-sans ${className}`}>{children}</p>
+  return <p className={`font-sans text-base ${className}`}>{children}</p>
 }
 
 const Typography = {

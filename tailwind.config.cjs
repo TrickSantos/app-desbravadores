@@ -4,7 +4,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        up: '0px 0px 5px rgba(0, 0, 0, 0.16)',
+      },
+    },
     fontFamily: {
       sans: ['Nunito Sans', 'sans-serif'],
     },
@@ -44,9 +48,22 @@ module.exports = {
         800: '#955BFF',
         900: '#8948FF',
       },
+      black: {
+        50: '#F2F2F2',
+        100: '#E6E6E6',
+        200: '#CCCCCC',
+        300: '#B3B3B3',
+        400: '#999999',
+        500: '#808080',
+        600: '#666666',
+        700: '#4D4D4D',
+        800: '#333333',
+        900: '#000000',
+      },
       green: '#00D468',
       red: '#FF3929',
       orange: '#FFAB14',
+      white: '#FFFFFF',
       ...defaultTheme.colors,
     },
     screens: {
