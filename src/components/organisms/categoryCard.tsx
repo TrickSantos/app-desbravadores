@@ -7,6 +7,7 @@ const { Text } = Typography
 type Props = {
   title: string
   completed: number
+  link: string
 }
 
 const CategoryCard = ({ title, completed }: Props) => {
