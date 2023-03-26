@@ -6,7 +6,7 @@ type Props = {
 
 const ProgressBar = ({ progress }: Props) => {
   return (
-    <div className="w-full bg-black-100 rounded-full h-2.5">
+    <div className="w-full bg-black-100 rounded-full h-2">
       <div
         className="bg-green h-full rounded-full"
         style={{
