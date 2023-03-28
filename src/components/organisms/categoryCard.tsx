@@ -1,6 +1,7 @@
 import { ReactComponent as Pintura } from '@assets/icons/pintura.svg'
 import ProgressBar from '@components/atoms/progressBar'
 import Typography from '@components/atoms/typography'
+import { useNavigate } from 'react-router-dom'
 
 const { Text } = Typography
 
@@ -10,9 +11,20 @@ type Props = {
   link: string
 }
 
-const CategoryCard = ({ title, completed }: Props) => {
+const CategoryCard = ({ title, completed, link }: Props) => {
+  const navigate = useNavigate()
+
   return (
-    <div className="grid grid-cols-2 gap-2 border border-black-100 rounded-xl shadow-md p-4">
+    <div
+      className="grid grid-cols-2 gap-2 border border-black-100 rounded-xl shadow-md p-4"
+      onClick={() =>
+        navigate(`/category/${link}`, {
+          state: {
+            category: link,
+          },
+        })
+      }
+    >
       <div className="col-span-2">
         <Pintura height={30} width={30} />
       </div>
