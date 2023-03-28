@@ -10,10 +10,10 @@ const CategoryList = () => {
         Desafios
       </Title>
       <div className="w-full grid grid-cols-2 gap-4">
-        <CategoryCard title="Pintura" completed={50} />
-        <CategoryCard title="Pintura" completed={50} />
-        <CategoryCard title="Pintura" completed={50} />
-        <CategoryCard title="Pintura" completed={50} />
+        <CategoryCard title="Participação" link="PARTICIPACAO" completed={25.5} />
+        <CategoryCard title="Social" link="SOCIAL" completed={50} />
+        <CategoryCard title="Espiritual" link="ESPIRITUALIDADE" completed={50} />
+        <CategoryCard title="Classe" link="CLASSE" completed={50} />
       </div>
     </div>
   )
