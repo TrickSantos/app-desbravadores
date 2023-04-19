@@ -1,16 +1,12 @@
 import NavigationItem from '@components/molecules/navigationItem'
 import { TiHome as HomeIcon } from 'react-icons/ti'
 import { FaRegLightbulb as Lightbulb, FaMedal as Medal, FaCogs as Settings } from 'react-icons/fa'
-import { useLocation } from 'react-router-dom'
-import configRoutes from '@config/routes'
-
-const routes = Object.keys(configRoutes).map((key) => configRoutes[key])
+import { useNavigationContext } from '@context/navigation'
 
 const BottomNavigation = () => {
-  const { pathname } = useLocation()
-  const hasFooter = routes.find((route) => route.path === pathname)?.showFooter
+  const { showFooter } = useNavigationContext()
 
-  if (!hasFooter) return <></>
+  if (!showFooter) return <></>
 
   return (
     <nav className="w-full bg-white rounded-t-xl border-t border-black-50 shadow-up z-10 fixed bottom-0 left-0">

@@ -1,13 +1,12 @@
-import BottomNavigation from '@components/organisms/bottomNavigation'
-import Header from '@components/organisms/header'
+import NavigationProvider from '@context/navigation'
 import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
   return (
     <div className="w-full">
-      <Header />
-      <Outlet />
-      <BottomNavigation />
+      <NavigationProvider>
+        <Outlet />
+      </NavigationProvider>
     </div>
   )
 }
