@@ -20,7 +20,7 @@ const CategoryCard = ({ title, completed, link }: Props) => {
       onClick={() =>
         navigate(`/category/${link}`, {
           state: {
-            category: link,
+            title: link,
           },
         })
       }
